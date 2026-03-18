@@ -6,7 +6,7 @@ type EnvironmentVariableCreateRequest struct {
 	Key         string               `json:"key"`
 	Type        EnvironmentValueType `json:"type"`
 	Description *string              `json:"description,omitempty"`
-	Value       string               `json:"value"`
+	Value       *string              `json:"value,omitempty"`
 }
 
 func (e *EnvironmentVariableCreateRequest) GetKey() string {
@@ -30,9 +30,9 @@ func (e *EnvironmentVariableCreateRequest) GetDescription() *string {
 	return e.Description
 }
 
-func (e *EnvironmentVariableCreateRequest) GetValue() string {
+func (e *EnvironmentVariableCreateRequest) GetValue() *string {
 	if e == nil {
-		return ""
+		return nil
 	}
 	return e.Value
 }

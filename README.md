@@ -44,7 +44,7 @@ terraform {
   required_providers {
     epilot-environment = {
       source  = "epilot-dev/epilot-environment"
-      version = "0.29.2"
+      version = "0.29.3"
     }
   }
 }

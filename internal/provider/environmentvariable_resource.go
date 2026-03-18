@@ -76,7 +76,8 @@ func (r *EnvironmentVariableResource) Schema(ctx context.Context, req resource.S
 				Computed: true,
 			},
 			"value": schema.StringAttribute{
-				Required:    true,
+				Computed:    true,
+				Optional:    true,
 				Description: `Value is returned for String type, omitted for SecretString`,
 			},
 		},

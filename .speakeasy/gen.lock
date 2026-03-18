@@ -1,16 +1,16 @@
 lockVersion: 2.0.0
 id: 5dee42fa-2e25-4dbc-9c1c-fe142fa19340
 management:
-  docChecksum: 17dbeab01ddc35b01e06fc2005bb110b
-  docVersion: 1.0.0
+  docChecksum: 758122eb699fc543242b262573ad0e0b
+  docVersion: 1.0.1
   speakeasyVersion: 1.755.1
   generationVersion: 2.865.2
-  releaseVersion: 0.29.2
-  configChecksum: fe7087aca580074d5c89151acad38191
+  releaseVersion: 0.29.3
+  configChecksum: acbcde25b9ee479acffa7e3cf9eac713
 persistentEdits:
-  generation_id: 8f88c185-3203-4b63-919c-9ba774378ae2
-  pristine_commit_hash: a6d4004367540aff9ab892b668fd1bf058afc4e5
-  pristine_tree_hash: 7f81275729a303da09618abce6298301e5c6471c
+  generation_id: 203a3f78-381c-4fef-be2b-f9f459a798f5
+  pristine_commit_hash: b3e0895e11fca7de3b8181224ded5335a5a97baf
+  pristine_tree_hash: 5e7b52406ef9db03a59ee250a873f0b5b7fa8c19
 features:
   terraform:
     additionalDependencies: 0.1.0
@@ -33,8 +33,8 @@ trackedFiles:
     pristine_git_object: 0e311a36317c36f56c9ea51f40f9b0edcb7111b5
   examples/provider/provider.tf:
     id: 954e955c0240
-    last_write_checksum: sha1:4a6c44acda4a22c864e179718e8539892b381cee
-    pristine_git_object: fd00c6f97101e86c53b0c8853bb8976caaa76961
+    last_write_checksum: sha1:fde418b894426a23df968e9ea7671922c11c6266
+    pristine_git_object: c45ceb3b86cb0ba46fbfa71b05c3ea928d5fd6fb
   examples/resources/epilot-environment_environment_variable/import-by-string-id.tf:
     id: 90625c88009d
     last_write_checksum: sha1:7c87c8dae64af409eea7ef356384e1d5b0406728
@@ -201,12 +201,12 @@ trackedFiles:
     pristine_git_object: a760a5cb6d69d2ec86ddca63f948707b21b450be
   internal/provider/environmentvariable_resource.go:
     id: 5539ced3d83a
-    last_write_checksum: sha1:a055c8ba5c88ee50ba0bb7a194c9eb58a2dfc0e9
-    pristine_git_object: 97331281ad514b14c4fd829e106f0ee701de39b1
+    last_write_checksum: sha1:f13a2769a8783694d84aadeac55e5c38c7e0039b
+    pristine_git_object: e776e1d5236ae46def8012061466f21a2ba4e814
   internal/provider/environmentvariable_resource_sdk.go:
     id: 19fe497e8c04
-    last_write_checksum: sha1:f78cf77a73d19c53d17ae2df1152eae23bcfe381
-    pristine_git_object: d6310d88a63ad21bb3f71e101a6dc653faafe8b9
+    last_write_checksum: sha1:a2609f372895869ba68ff2c624eb2ffe0e516fe0
+    pristine_git_object: 627e36747dfc68fa8503329f1cd82229aeffa1fd
   internal/provider/provider.go:
     id: 1e7e86841cf3
     last_write_checksum: sha1:c8cf9c56bc9f552cc07973006646792a35372890
@@ -393,8 +393,8 @@ trackedFiles:
     pristine_git_object: d31e56714e885ec2f8f1bdd52735754c41f58d2a
   internal/sdk/models/shared/environmentvariablecreaterequest.go:
     id: 6c807c5f7c2b
-    last_write_checksum: sha1:befce6e3843fb52f3581c8eb029b53de0faced3a
-    pristine_git_object: 44b2ac8cf63795d8d651d92498ec64166819af48
+    last_write_checksum: sha1:83e8741afe9c30448b7e78103f94ed60234ea711
+    pristine_git_object: 7fe84d7e5a26916490bd62d37e7b03c7f9a264eb
   internal/sdk/models/shared/environmentvariablelist.go:
     id: 525cbbe2354c
     last_write_checksum: sha1:47783aee6c18cc4d6fd6ce0e581daa51585d00a0
@@ -405,8 +405,8 @@ trackedFiles:
     pristine_git_object: c61921ee20faab2843cd9b3c964264da0df0ddd7
   internal/sdk/models/shared/environmentvariableupdaterequest.go:
     id: 416257b605b7
-    last_write_checksum: sha1:5a75328e5fc954f0122b9c260e411b717a47ef39
-    pristine_git_object: 7649e4f2f28e424f0a8191fcf43bc4bc6b80fa5e
+    last_write_checksum: sha1:c4dd702ecb65801763d6091d83681b0af58bb912
+    pristine_git_object: c7b95499d69a624a35f28bfba891b01197715ac9
   internal/sdk/models/shared/security.go:
     id: 9098af98367e
     last_write_checksum: sha1:4b99dae59844b25a5acc4fa1a73ca1e623f2e08e
@@ -425,8 +425,8 @@ trackedFiles:
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   internal/sdk/sdk.go:
     id: 02d7190ee502
-    last_write_checksum: sha1:07beb878e8c9b63860bd9f22c27615bf4f544388
-    pristine_git_object: fc77dea453cca510e5e8e55c2ccf2664a5b48bec
+    last_write_checksum: sha1:52034427f20858b5901d5c3205bb7faf05c07116
+    pristine_git_object: 38a6ca56a51f2dd744c7e592fa387faea1935a90
   internal/sdk/types/bigint.go:
     id: fc530b70337e
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
@@ -524,7 +524,7 @@ examples:
   createEnvironmentVariable:
     speakeasy-default-create-environment-variable:
       requestBody:
-        application/json: {"key": "<key>", "type": "SecretString", "value": "<value>"}
+        application/json: {"key": "<key>", "type": "SecretString"}
       responses:
         "201":
           application/json: {"key": "<key>", "type": "SecretString", "created_at": "2025-05-19T08:48:24.320Z", "updated_at": "2024-04-28T10:31:05.036Z"}
@@ -542,7 +542,7 @@ examples:
         path:
           key: "<key>"
       requestBody:
-        application/json: {"value": "<value>"}
+        application/json: {}
       responses:
         "200":
           application/json: {"key": "<key>", "type": "SecretString", "created_at": "2024-05-10T03:09:25.045Z", "updated_at": "2024-01-31T21:17:19.616Z"}

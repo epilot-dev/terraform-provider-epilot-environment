@@ -5,7 +5,7 @@ package shared
 type EnvironmentVariableUpdateRequest struct {
 	// Type of variable. Used when creating a new variable. Defaults to String.
 	Type        *EnvironmentValueType `json:"type,omitempty"`
-	Value       string                `json:"value"`
+	Value       *string               `json:"value,omitempty"`
 	Description *string               `json:"description,omitempty"`
 }
 
@@ -16,9 +16,9 @@ func (e *EnvironmentVariableUpdateRequest) GetType() *EnvironmentValueType {
 	return e.Type
 }
 
-func (e *EnvironmentVariableUpdateRequest) GetValue() string {
+func (e *EnvironmentVariableUpdateRequest) GetValue() *string {
 	if e == nil {
-		return ""
+		return nil
 	}
 	return e.Value
 }

@@ -86,9 +86,12 @@ func (r *EnvironmentVariableResourceModel) ToSharedEnvironmentVariableCreateRequ
 	} else {
 		description = nil
 	}
-	var value string
-	value = r.Value.ValueString()
-
+	value := new(string)
+	if !r.Value.IsUnknown() && !r.Value.IsNull() {
+		*value = r.Value.ValueString()
+	} else {
+		value = nil
+	}
 	out := shared.EnvironmentVariableCreateRequest{
 		Key:         key,
 		Type:        typeVar,
@@ -108,9 +111,12 @@ func (r *EnvironmentVariableResourceModel) ToSharedEnvironmentVariableUpdateRequ
 	} else {
 		typeVar = nil
 	}
-	var value string
-	value = r.Value.ValueString()
-
+	value := new(string)
+	if !r.Value.IsUnknown() && !r.Value.IsNull() {
+		*value = r.Value.ValueString()
+	} else {
+		value = nil
+	}
 	description := new(string)
 	if !r.Description.IsUnknown() && !r.Description.IsNull() {
 		*description = r.Description.ValueString()

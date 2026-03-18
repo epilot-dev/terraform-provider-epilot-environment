@@ -28,11 +28,11 @@ resource "epilot-environment_environment_variable" "my_environmentvariable" {
 
 - `key` (String) Environment variable key
 - `type` (String) Type of variable. Used when creating a new variable. Defaults to String. must be one of ["String", "SecretString"]
-- `value` (String) Value is returned for String type, omitted for SecretString
 
 ### Optional
 
 - `description` (String)
+- `value` (String) Value is returned for String type, omitted for SecretString
 
 ### Read-Only
 
