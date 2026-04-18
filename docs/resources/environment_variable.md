@@ -15,7 +15,9 @@ EnvironmentVariable Resource
 ```terraform
 resource "epilot-environment_environment_variable" "my_environmentvariable" {
   description = "...my_description..."
+  group       = "...my_group..."
   key         = "...my_key..."
+  protected   = true
   type        = "String"
   value       = "...my_value..."
 }
@@ -32,6 +34,8 @@ resource "epilot-environment_environment_variable" "my_environmentvariable" {
 ### Optional
 
 - `description` (String)
+- `group` (String) Optional group name for organising variables in the UI
+- `protected` (Boolean) Whether the variable is protected from editing
 - `value` (String) Value is returned for String type, omitted for SecretString
 
 ### Read-Only

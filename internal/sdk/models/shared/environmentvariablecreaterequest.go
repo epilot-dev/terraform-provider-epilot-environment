@@ -6,7 +6,10 @@ type EnvironmentVariableCreateRequest struct {
 	Key         string               `json:"key"`
 	Type        EnvironmentValueType `json:"type"`
 	Description *string              `json:"description,omitempty"`
+	Group       *string              `json:"group,omitempty"`
 	Value       *string              `json:"value,omitempty"`
+	// Whether the variable is protected from editing
+	Protected *bool `json:"protected,omitempty"`
 }
 
 func (e *EnvironmentVariableCreateRequest) GetKey() string {
@@ -30,9 +33,23 @@ func (e *EnvironmentVariableCreateRequest) GetDescription() *string {
 	return e.Description
 }
 
+func (e *EnvironmentVariableCreateRequest) GetGroup() *string {
+	if e == nil {
+		return nil
+	}
+	return e.Group
+}
+
 func (e *EnvironmentVariableCreateRequest) GetValue() *string {
 	if e == nil {
 		return nil
 	}
 	return e.Value
+}
+
+func (e *EnvironmentVariableCreateRequest) GetProtected() *bool {
+	if e == nil {
+		return nil
+	}
+	return e.Protected
 }

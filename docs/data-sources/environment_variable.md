@@ -29,6 +29,8 @@ data "epilot-environment_environment_variable" "my_environmentvariable" {
 
 - `created_at` (String)
 - `description` (String)
+- `group` (String) Optional group name for organising variables in the UI
+- `protected` (Boolean) Whether the variable is protected from editing
 - `type` (String)
 - `updated_at` (String)
 - `value` (String) Value is returned for String type, omitted for SecretString
