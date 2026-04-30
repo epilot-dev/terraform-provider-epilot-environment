@@ -17,7 +17,9 @@ func (r *EnvironmentVariableResourceModel) RefreshFromSharedEnvironmentVariable(
 	if resp != nil {
 		r.CreatedAt = types.StringValue(typeconvert.TimeToString(resp.CreatedAt))
 		r.Description = types.StringPointerValue(resp.Description)
+		r.Group = types.StringPointerValue(resp.Group)
 		r.Key = types.StringValue(resp.Key)
+		r.Protected = types.BoolPointerValue(resp.Protected)
 		r.Type = types.StringValue(string(resp.Type))
 		r.UpdatedAt = types.StringValue(typeconvert.TimeToString(resp.UpdatedAt))
 		r.Value = types.StringPointerValue(resp.Value)
@@ -86,17 +88,31 @@ func (r *EnvironmentVariableResourceModel) ToSharedEnvironmentVariableCreateRequ
 	} else {
 		description = nil
 	}
+	group := new(string)
+	if !r.Group.IsUnknown() && !r.Group.IsNull() {
+		*group = r.Group.ValueString()
+	} else {
+		group = nil
+	}
 	value := new(string)
 	if !r.Value.IsUnknown() && !r.Value.IsNull() {
 		*value = r.Value.ValueString()
 	} else {
 		value = nil
 	}
+	protected := new(bool)
+	if !r.Protected.IsUnknown() && !r.Protected.IsNull() {
+		*protected = r.Protected.ValueBool()
+	} else {
+		protected = nil
+	}
 	out := shared.EnvironmentVariableCreateRequest{
 		Key:         key,
 		Type:        typeVar,
 		Description: description,
+		Group:       group,
 		Value:       value,
+		Protected:   protected,
 	}
 
 	return &out, diags
@@ -123,10 +139,24 @@ func (r *EnvironmentVariableResourceModel) ToSharedEnvironmentVariableUpdateRequ
 	} else {
 		description = nil
 	}
+	group := new(string)
+	if !r.Group.IsUnknown() && !r.Group.IsNull() {
+		*group = r.Group.ValueString()
+	} else {
+		group = nil
+	}
+	protected := new(bool)
+	if !r.Protected.IsUnknown() && !r.Protected.IsNull() {
+		*protected = r.Protected.ValueBool()
+	} else {
+		protected = nil
+	}
 	out := shared.EnvironmentVariableUpdateRequest{
 		Type:        typeVar,
 		Value:       value,
 		Description: description,
+		Group:       group,
+		Protected:   protected,
 	}
 
 	return &out, diags

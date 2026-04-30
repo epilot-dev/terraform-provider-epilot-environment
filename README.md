@@ -51,7 +51,7 @@ terraform {
 
 provider "epilot-environment" {
   epilot_auth = "<YOUR_EPILOT_AUTH>" # Required
-  server_url = "..." # Optional
+  server_url  = "..."                # Optional
 }
 ```
 <!-- End Installation [installation] -->
