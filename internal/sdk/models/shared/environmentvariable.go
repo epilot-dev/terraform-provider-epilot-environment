@@ -11,8 +11,12 @@ type EnvironmentVariable struct {
 	Key         string               `json:"key"`
 	Type        EnvironmentValueType `json:"type"`
 	Description *string              `json:"description,omitempty"`
+	// Optional group name for organising variables in the UI
+	Group *string `json:"group,omitempty"`
 	// Value is returned for String type, omitted for SecretString
-	Value     *string   `json:"value,omitempty"`
+	Value *string `json:"value,omitempty"`
+	// Whether the variable is protected from editing
+	Protected *bool     `json:"protected,omitempty"`
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
 }
@@ -49,11 +53,25 @@ func (e *EnvironmentVariable) GetDescription() *string {
 	return e.Description
 }
 
+func (e *EnvironmentVariable) GetGroup() *string {
+	if e == nil {
+		return nil
+	}
+	return e.Group
+}
+
 func (e *EnvironmentVariable) GetValue() *string {
 	if e == nil {
 		return nil
 	}
 	return e.Value
+}
+
+func (e *EnvironmentVariable) GetProtected() *bool {
+	if e == nil {
+		return nil
+	}
+	return e.Protected
 }
 
 func (e *EnvironmentVariable) GetCreatedAt() time.Time {

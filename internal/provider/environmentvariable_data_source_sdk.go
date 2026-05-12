@@ -17,7 +17,9 @@ func (r *EnvironmentVariableDataSourceModel) RefreshFromSharedEnvironmentVariabl
 	if resp != nil {
 		r.CreatedAt = types.StringValue(typeconvert.TimeToString(resp.CreatedAt))
 		r.Description = types.StringPointerValue(resp.Description)
+		r.Group = types.StringPointerValue(resp.Group)
 		r.Key = types.StringValue(resp.Key)
+		r.Protected = types.BoolPointerValue(resp.Protected)
 		r.Type = types.StringValue(string(resp.Type))
 		r.UpdatedAt = types.StringValue(typeconvert.TimeToString(resp.UpdatedAt))
 		r.Value = types.StringPointerValue(resp.Value)

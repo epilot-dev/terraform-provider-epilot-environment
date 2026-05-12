@@ -33,7 +33,9 @@ type EnvironmentVariableDataSource struct {
 type EnvironmentVariableDataSourceModel struct {
 	CreatedAt   types.String `tfsdk:"created_at"`
 	Description types.String `tfsdk:"description"`
+	Group       types.String `tfsdk:"group"`
 	Key         types.String `tfsdk:"key"`
+	Protected   types.Bool   `tfsdk:"protected"`
 	Type        types.String `tfsdk:"type"`
 	UpdatedAt   types.String `tfsdk:"updated_at"`
 	Value       types.String `tfsdk:"value"`
@@ -56,12 +58,20 @@ func (r *EnvironmentVariableDataSource) Schema(ctx context.Context, req datasour
 			"description": schema.StringAttribute{
 				Computed: true,
 			},
+			"group": schema.StringAttribute{
+				Computed:    true,
+				Description: `Optional group name for organising variables in the UI`,
+			},
 			"key": schema.StringAttribute{
 				Required:    true,
 				Description: `Environment variable key`,
 				Validators: []validator.String{
 					stringvalidator.RegexMatches(regexp.MustCompile(`^[a-z0-9][a-z0-9_.\-]{0,127}$`), "must match pattern "+regexp.MustCompile(`^[a-z0-9][a-z0-9_.\-]{0,127}$`).String()),
 				},
+			},
+			"protected": schema.BoolAttribute{
+				Computed:    true,
+				Description: `Whether the variable is protected from editing`,
 			},
 			"type": schema.StringAttribute{
 				Computed: true,
