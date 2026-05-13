@@ -15,6 +15,7 @@ actions:
         statusCodes:
           - 5XX
         retryConnectionErrors: true
+
   # Environment Variables
   - target: $["paths"]["/v1/environments/{key}"]["get"]
     update:
