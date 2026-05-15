@@ -127,9 +127,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.30.2",
+		SDKVersion: "0.30.4",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/terraform 0.30.2 2.881.16 1.0.1 github.com/epilot-dev/terraform-provider-epilot-environment/internal/sdk",
+			UserAgent:  "speakeasy-sdk/terraform 0.30.4 2.881.16 1.0.1 github.com/epilot-dev/terraform-provider-epilot-environment/internal/sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
