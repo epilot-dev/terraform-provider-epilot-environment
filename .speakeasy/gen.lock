@@ -3,14 +3,16 @@ id: 5dee42fa-2e25-4dbc-9c1c-fe142fa19340
 management:
   docChecksum: 0790d959dcfe185ed4b4796071e2b66c
   docVersion: 1.0.1
-  speakeasyVersion: 1.761.10
-  generationVersion: 2.881.16
-  releaseVersion: 0.30.4
-  configChecksum: d5925d0e4a48b6e87a9187c1bc783ae3
+  speakeasyVersion: 1.763.2
+  generationVersion: 2.884.4
+  releaseVersion: 0.30.5
+  configChecksum: 71435ebd0dfd0675739c7a1dfcb01de7
+  repoURL: https://github.com/epilot-dev/terraform-provider-epilot-environment.git
+  installationURL: https://github.com/epilot-dev/terraform-provider-epilot-environment
 persistentEdits:
-  generation_id: 4ccce4a1-0094-4725-8614-f9c0f3c03aa9
-  pristine_commit_hash: 8c309fb1f73ffa810224167fc1495adf6b66c821
-  pristine_tree_hash: d5e80fe4a3beab922d2c5768e535dbbc29bdeee5
+  generation_id: 768482c7-ca87-41d8-a570-4e8e4c4f5fda
+  pristine_commit_hash: 87693cff420e2e55ff4c26d4f8a937f513301e69
+  pristine_tree_hash: 600edbc61746904828cd7d019a85dbefc43b0d48
 features:
   terraform:
     additionalDependencies: 0.1.0
@@ -33,8 +35,8 @@ trackedFiles:
     pristine_git_object: 0e311a36317c36f56c9ea51f40f9b0edcb7111b5
   examples/provider/provider.tf:
     id: 954e955c0240
-    last_write_checksum: sha1:d5e7347f02df5ef309e578d59aa16ea722da0f8f
-    pristine_git_object: e832de749c35f97699a04d830c6528cd7c0a6407
+    last_write_checksum: sha1:7494e0d974e4b13b0fde3d5578afe147484f0c95
+    pristine_git_object: 906d22fcd12f72b9337068504d5d0dfd4bf7f006
   examples/resources/epilot-environment_environment_variable/import-by-string-id.tf:
     id: 90625c88009d
     last_write_checksum: sha1:7c87c8dae64af409eea7ef356384e1d5b0406728
@@ -49,8 +51,8 @@ trackedFiles:
     pristine_git_object: bf5c97a48ba4151fd2f324429bdf59cfe37ea31e
   go.mod:
     id: c47645c391ad
-    last_write_checksum: sha1:f419802fb7edfcad8d987752b31f1904650766a4
-    pristine_git_object: a49226ec9933a56c6690153b8703f5aa1fa0ad6e
+    last_write_checksum: sha1:68cbeff7b96eb32185fe894d6cf8909f1d004e35
+    pristine_git_object: 38a6b7e8607bccc2baf9e65d0f5332444f369551
   internal/planmodifiers/boolplanmodifier/suppress_diff.go:
     id: 3cf85b98963e
     last_write_checksum: sha1:a807863b70c2d8b1744c7e80b571208ebc67978e
@@ -345,12 +347,12 @@ trackedFiles:
     pristine_git_object: a2332ee8de013a2121880e4b7be332d3385c6f41
   internal/sdk/internal/utils/union.go:
     id: 183142835cfe
-    last_write_checksum: sha1:7a5d583499e83aa4214be5488bb1257809ff1cb1
-    pristine_git_object: 3799b885a3649fff9bd8eb9fbd3fa110e28c6fd9
+    last_write_checksum: sha1:709ad6bd6cd3a74cf9f5640bd54570bd4a4d29e6
+    pristine_git_object: ca526c62ffefc7bbaf5a5edaea6c2b5963923627
   internal/sdk/internal/utils/union_test.go:
     id: 4c885192f6f0
-    last_write_checksum: sha1:83ac73c1901de4c6db90f65cf5879163f3d47a00
-    pristine_git_object: f66814c73ace94d8e71d785fd6161fb405745754
+    last_write_checksum: sha1:bd5c7506e1d6238117c1ac4e340314a5a41401b5
+    pristine_git_object: 138f7e2a066b10dffd0a9957ecfcab9e00dd26fe
   internal/sdk/internal/utils/utils.go:
     id: feefcdf75dbd
     last_write_checksum: sha1:c03378176a107205b8938606faef3fd8fb8f91a0
@@ -449,8 +451,8 @@ trackedFiles:
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   internal/sdk/sdk.go:
     id: 02d7190ee502
-    last_write_checksum: sha1:010438fc809867885c78420bb22a30743520beeb
-    pristine_git_object: 6adc089d07c802aa157d03a8f6d1c990e4fe2249
+    last_write_checksum: sha1:cfba05b46399761bc91c52c2f7fa077ec40e52e3
+    pristine_git_object: eb88dabb4e41a9e37998fcd1e5f5ce79e9e31baf
   internal/sdk/types/bigint.go:
     id: fc530b70337e
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
@@ -596,3 +598,24 @@ examples:
         path:
           name: "<value>"
 examplesVersion: 1.0.2
+releaseNotes: |
+  ## Terraform SDK Changes:
+  * `SDK.environments.listEnvironmentVariables()`: **Added**
+  * `SDK.environments.createEnvironmentVariable()`: **Added**
+  * `SDK.environments.listEnvironmentGroups()`: **Added**
+  * `SDK.environments.putEnvironmentGroup()`: **Added**
+  * `SDK.environments.deleteEnvironmentGroup()`: **Added**
+  * `SDK.environments.getEnvironmentVariable()`: **Added**
+  * `SDK.environments.updateEnvironmentVariable()`: **Added**
+  * `SDK.environments.deleteEnvironmentVariable()`: **Added**
+  * `SDK.Workflows.getMaxAllowedLimit()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.getDefinitions()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.createDefinition()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.getDefinition()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.updateDefinition()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.deleteDefinition()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.getWorkflowClosingReasons()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.setWorkflowClosingReasons()`: **Removed** (Breaking ⚠️)
+  * `SDK.Closing Reason.getAllClosingReasons()`: **Removed** (Breaking ⚠️)
+  * `SDK.Closing Reason.createClosingReason()`: **Removed** (Breaking ⚠️)
+  * `SDK.Closing Reason.changeReasonStatus()`: **Removed** (Breaking ⚠️)
