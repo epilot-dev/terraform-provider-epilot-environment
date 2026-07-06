@@ -32,7 +32,7 @@ func newEnvironments(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// ListEnvironmentVariables - List environment variables
+// ListEnvironmentVariables - listEnvironmentVariables
 // List all environment variables for the organization. Returns metadata only, no secret values.
 func (s *Environments) ListEnvironmentVariables(ctx context.Context, opts ...operations.Option) (*operations.ListEnvironmentVariablesResponse, error) {
 	o := operations.Options{}
@@ -237,8 +237,8 @@ func (s *Environments) ListEnvironmentVariables(ctx context.Context, opts ...ope
 
 }
 
-// CreateEnvironmentVariable - Create environment variable
-// Create a new environment variable or secret for the organization.
+// CreateEnvironmentVariable - createEnvironmentVariable
+// Create a new environment variable or secret for the organization. If `group` is provided and the group does not yet exist, it is created automatically.
 func (s *Environments) CreateEnvironmentVariable(ctx context.Context, request shared.EnvironmentVariableCreateRequest, opts ...operations.Option) (*operations.CreateEnvironmentVariableResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -453,7 +453,7 @@ func (s *Environments) CreateEnvironmentVariable(ctx context.Context, request sh
 
 }
 
-// ListEnvironmentGroups - List environment groups
+// ListEnvironmentGroups - listEnvironmentGroups
 // List all environment groups for the organization.
 func (s *Environments) ListEnvironmentGroups(ctx context.Context, opts ...operations.Option) (*operations.ListEnvironmentGroupsResponse, error) {
 	o := operations.Options{}
@@ -659,6 +659,7 @@ func (s *Environments) ListEnvironmentGroups(ctx context.Context, opts ...operat
 }
 
 // PutEnvironmentGroup - putEnvironmentGroup
+// Create or update an environment group by name. Acts as an upsert — creates the group if it does not exist.
 func (s *Environments) PutEnvironmentGroup(ctx context.Context, request operations.PutEnvironmentGroupRequest, opts ...operations.Option) (*operations.PutEnvironmentGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -871,7 +872,7 @@ func (s *Environments) PutEnvironmentGroup(ctx context.Context, request operatio
 
 }
 
-// DeleteEnvironmentGroup - Delete an environment group
+// DeleteEnvironmentGroup - deleteEnvironmentGroup
 // Deletes a group. Variables assigned to this group become ungrouped.
 func (s *Environments) DeleteEnvironmentGroup(ctx context.Context, request operations.DeleteEnvironmentGroupRequest, opts ...operations.Option) (*operations.DeleteEnvironmentGroupResponse, error) {
 	o := operations.Options{}
@@ -1059,7 +1060,7 @@ func (s *Environments) DeleteEnvironmentGroup(ctx context.Context, request opera
 
 }
 
-// GetEnvironmentVariable - Get environment variable
+// GetEnvironmentVariable - getEnvironmentVariable
 // Get an environment variable by key. Returns value only for String type, omitted for SecretString.
 func (s *Environments) GetEnvironmentVariable(ctx context.Context, request operations.GetEnvironmentVariableRequest, opts ...operations.Option) (*operations.GetEnvironmentVariableResponse, error) {
 	o := operations.Options{}
@@ -1266,8 +1267,8 @@ func (s *Environments) GetEnvironmentVariable(ctx context.Context, request opera
 
 }
 
-// UpdateEnvironmentVariable - Update environment variable
-// Create or update an environment variable. Acts as an upsert — creates the variable if it does not exist.
+// UpdateEnvironmentVariable - updateEnvironmentVariable
+// Create or update an environment variable. Acts as an upsert — creates the variable if it does not exist. If `group` is provided and the group does not yet exist, it is created automatically.
 func (s *Environments) UpdateEnvironmentVariable(ctx context.Context, request operations.UpdateEnvironmentVariableRequest, opts ...operations.Option) (*operations.UpdateEnvironmentVariableResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1482,7 +1483,7 @@ func (s *Environments) UpdateEnvironmentVariable(ctx context.Context, request op
 
 }
 
-// DeleteEnvironmentVariable - Delete environment variable
+// DeleteEnvironmentVariable - deleteEnvironmentVariable
 // Delete an environment variable by key.
 func (s *Environments) DeleteEnvironmentVariable(ctx context.Context, request operations.DeleteEnvironmentVariableRequest, opts ...operations.Option) (*operations.DeleteEnvironmentVariableResponse, error) {
 	o := operations.Options{}

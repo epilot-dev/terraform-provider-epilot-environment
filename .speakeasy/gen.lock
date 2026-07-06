@@ -1,23 +1,25 @@
 lockVersion: 2.0.0
 id: 5dee42fa-2e25-4dbc-9c1c-fe142fa19340
 management:
-  docChecksum: 0790d959dcfe185ed4b4796071e2b66c
+  docChecksum: a452ebf46af9fb86847e9c088bee7427
   docVersion: 1.0.1
-  speakeasyVersion: 1.761.10
-  generationVersion: 2.881.16
-  releaseVersion: 0.30.4
-  configChecksum: d5925d0e4a48b6e87a9187c1bc783ae3
+  speakeasyVersion: 1.788.1
+  generationVersion: 2.915.1
+  releaseVersion: 0.30.5
+  configChecksum: 71435ebd0dfd0675739c7a1dfcb01de7
+  repoURL: https://github.com/epilot-dev/terraform-provider-epilot-environment.git
+  installationURL: https://github.com/epilot-dev/terraform-provider-epilot-environment
 persistentEdits:
-  generation_id: 4ccce4a1-0094-4725-8614-f9c0f3c03aa9
-  pristine_commit_hash: 8c309fb1f73ffa810224167fc1495adf6b66c821
-  pristine_tree_hash: d5e80fe4a3beab922d2c5768e535dbbc29bdeee5
+  generation_id: f945cd96-7e63-4a41-9274-d30f23a6dbb9
+  pristine_commit_hash: 575ee7a503391d02fb8aecba5acc35d73c4a1cb1
+  pristine_tree_hash: 72b2dfe6b0d1d0fc2ff010d22a46cdc8e7615661
 features:
   terraform:
     additionalDependencies: 0.1.0
-    core: 3.47.4
+    core: 3.47.10
     globalSecurity: 2.82.3
     globalServerURLs: 2.83.2
-    retries: 2.81.4
+    retries: 2.81.5
 trackedFiles:
   .gitattributes:
     id: 24139dae6567
@@ -33,8 +35,8 @@ trackedFiles:
     pristine_git_object: 0e311a36317c36f56c9ea51f40f9b0edcb7111b5
   examples/provider/provider.tf:
     id: 954e955c0240
-    last_write_checksum: sha1:d5e7347f02df5ef309e578d59aa16ea722da0f8f
-    pristine_git_object: e832de749c35f97699a04d830c6528cd7c0a6407
+    last_write_checksum: sha1:7494e0d974e4b13b0fde3d5578afe147484f0c95
+    pristine_git_object: 906d22fcd12f72b9337068504d5d0dfd4bf7f006
   examples/resources/epilot-environment_environment_variable/import-by-string-id.tf:
     id: 90625c88009d
     last_write_checksum: sha1:7c87c8dae64af409eea7ef356384e1d5b0406728
@@ -49,8 +51,8 @@ trackedFiles:
     pristine_git_object: bf5c97a48ba4151fd2f324429bdf59cfe37ea31e
   go.mod:
     id: c47645c391ad
-    last_write_checksum: sha1:f419802fb7edfcad8d987752b31f1904650766a4
-    pristine_git_object: a49226ec9933a56c6690153b8703f5aa1fa0ad6e
+    last_write_checksum: sha1:d3634f7e5f25782bfbecc2172771da572bd82d70
+    pristine_git_object: 4acd2cf604a260c4387f0b6a78b00f3c639f3faa
   internal/planmodifiers/boolplanmodifier/suppress_diff.go:
     id: 3cf85b98963e
     last_write_checksum: sha1:a807863b70c2d8b1744c7e80b571208ebc67978e
@@ -293,8 +295,8 @@ trackedFiles:
     pristine_git_object: 3261dbe5d014a86e2db7a224f16a0f8d97389448
   internal/sdk/environments.go:
     id: ed21197f3403
-    last_write_checksum: sha1:7e538b84009abb7cb60cbaf7aa29064850c850c1
-    pristine_git_object: 790c7fc26e5572e4b1b5961e297aec9968285ae9
+    last_write_checksum: sha1:c1b38bc4147880ae115924fb011e218516b357c0
+    pristine_git_object: f588f30d387cea110a9aab1f16da73cb23e219f1
   internal/sdk/internal/config/sdkconfiguration.go:
     id: 6af0bc8635d9
     last_write_checksum: sha1:d0d4ba7dcd39fb4a36e02d2bdc83f394881c45d5
@@ -321,8 +323,8 @@ trackedFiles:
     pristine_git_object: a79a77d2eda7b828b1771acb2cbe8f7d37cac081
   internal/sdk/internal/utils/json.go:
     id: 2231afac3add
-    last_write_checksum: sha1:9706a69ad4dab57fc434cda6613b5b7831314cca
-    pristine_git_object: 89b64a4d94a7c807582b8ad96d9f25c81aa02935
+    last_write_checksum: sha1:f291117af5cba67e1b624ceb2251db114f7df232
+    pristine_git_object: 1aa9d9aff4d7abb9bc59ec6adfbca7bd1382f7a3
   internal/sdk/internal/utils/pathparams.go:
     id: e7fec2afe4a6
     last_write_checksum: sha1:2811644143dc856947be74d133ce0624f7412163
@@ -345,12 +347,12 @@ trackedFiles:
     pristine_git_object: a2332ee8de013a2121880e4b7be332d3385c6f41
   internal/sdk/internal/utils/union.go:
     id: 183142835cfe
-    last_write_checksum: sha1:7a5d583499e83aa4214be5488bb1257809ff1cb1
-    pristine_git_object: 3799b885a3649fff9bd8eb9fbd3fa110e28c6fd9
+    last_write_checksum: sha1:709ad6bd6cd3a74cf9f5640bd54570bd4a4d29e6
+    pristine_git_object: ca526c62ffefc7bbaf5a5edaea6c2b5963923627
   internal/sdk/internal/utils/union_test.go:
     id: 4c885192f6f0
-    last_write_checksum: sha1:83ac73c1901de4c6db90f65cf5879163f3d47a00
-    pristine_git_object: f66814c73ace94d8e71d785fd6161fb405745754
+    last_write_checksum: sha1:bd5c7506e1d6238117c1ac4e340314a5a41401b5
+    pristine_git_object: 138f7e2a066b10dffd0a9957ecfcab9e00dd26fe
   internal/sdk/internal/utils/utils.go:
     id: feefcdf75dbd
     last_write_checksum: sha1:c03378176a107205b8938606faef3fd8fb8f91a0
@@ -445,12 +447,12 @@ trackedFiles:
     pristine_git_object: e6e5a01c6e721e879e24a38a1f97e3e27d4686d4
   internal/sdk/retry/config.go:
     id: 7ea5fa9128b6
-    last_write_checksum: sha1:7f7d96b59a18e95bac847ae09c63bbd911ee8432
-    pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
+    last_write_checksum: sha1:102d1953fbd7e9f312c4442c71ccca2eaaeaa27d
+    pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
   internal/sdk/sdk.go:
     id: 02d7190ee502
-    last_write_checksum: sha1:010438fc809867885c78420bb22a30743520beeb
-    pristine_git_object: 6adc089d07c802aa157d03a8f6d1c990e4fe2249
+    last_write_checksum: sha1:e2d3dffc18f1dc948294189ba3f2b7ef6883ddfa
+    pristine_git_object: c6b9dc21a65fcbb0ecfb03e66705eb44c1b9bcf2
   internal/sdk/types/bigint.go:
     id: fc530b70337e
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
@@ -596,3 +598,24 @@ examples:
         path:
           name: "<value>"
 examplesVersion: 1.0.2
+releaseNotes: |
+  ## Terraform SDK Changes:
+  * `SDK.environments.listEnvironmentVariables()`: **Added**
+  * `SDK.environments.createEnvironmentVariable()`: **Added**
+  * `SDK.environments.listEnvironmentGroups()`: **Added**
+  * `SDK.environments.putEnvironmentGroup()`: **Added**
+  * `SDK.environments.deleteEnvironmentGroup()`: **Added**
+  * `SDK.environments.getEnvironmentVariable()`: **Added**
+  * `SDK.environments.updateEnvironmentVariable()`: **Added**
+  * `SDK.environments.deleteEnvironmentVariable()`: **Added**
+  * `SDK.Workflows.getMaxAllowedLimit()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.getDefinitions()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.createDefinition()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.getDefinition()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.updateDefinition()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.deleteDefinition()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.getWorkflowClosingReasons()`: **Removed** (Breaking ⚠️)
+  * `SDK.Workflows.setWorkflowClosingReasons()`: **Removed** (Breaking ⚠️)
+  * `SDK.Closing Reason.getAllClosingReasons()`: **Removed** (Breaking ⚠️)
+  * `SDK.Closing Reason.createClosingReason()`: **Removed** (Breaking ⚠️)
+  * `SDK.Closing Reason.changeReasonStatus()`: **Removed** (Breaking ⚠️)
